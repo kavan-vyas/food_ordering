@@ -32,12 +32,12 @@ def_default()
 
 def def_main():
     while True:
-        print("*" * 28 + "FOOD ORDERING SYSTEM" + "*" * 24 + "\n")
-        print("*" * 31 + "MAIN MENU" + "*" * 32 + "\n"
-              "\t(O) ORDER\n"
-              "\t(R) REPORT\n"
-              "\t(P) PAYMENT\n"
-              "\t(E) EXIT\n" +
+        print("*" * 28 + "Food Ordering System" + "*" * 24 + "\n")
+        print("*" * 31 + "Main Menu" + "*" * 32 + "\n"
+              "\t(O) Order\n"
+              "\t(R) Report\n"
+              "\t(P) Payment\n"
+              "\t(E) Exit\n" +
               "_" * 72)
 
         input_1 = str(input("Please Select Your Operation: ")).upper()
@@ -55,23 +55,23 @@ def def_main():
                 def_payment()
                 break
             elif (input_1 == 'E'):
-                print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")
+                print("*" * 32 + "Thank You" + "*" * 31 + "\n")
                 break
             else:
-                print("\n" * 10 + "ERROR: Invalid Input (" +
-                      str(input_1) + "). Try again!")
+                print("\n" * 10 + "Error: Invalid Input (" +
+                      str(input_1) + "). Try Again!")
         else:
-            print("\n" * 10 + "ERROR: Invalid Input (" +
-                  str(input_1) + "). Try again!")
+            print("\n" * 10 + "Error: Invalid Input (" +
+                  str(input_1) + "). Try Again!")
 
 
 def def_order_menu():
     while True:
-        print("*" * 31 + "ORDER PAGE" + "*" * 31 + "\n"
-              "\t(F) FOODS AND DRINKS\n"
-              "\t(O) OTHER SERVICES\n"
-              "\t(M) MAIN MENU\n"
-              "\t(E) EXIT\n" +
+        print("*" * 31 + "Order Page" + "*" * 31 + "\n"
+              "\t(F) Foods And Drinks\n"
+              "\t(O) Other Services\n"
+              "\t(M) Main Menu\n"
+              "\t(E) Exit\n" +
               "_" * 72)
 
         input_1 = str(input("Please Select Your Operation: ")).upper()
@@ -89,14 +89,14 @@ def def_order_menu():
                 def_main()
                 break
             elif (input_1 == 'E'):
-                print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")
+                print("*" * 32 + "Thank You" + "*" * 31 + "\n")
                 break
             else:
-                print("\n" * 10 + "ERROR: Invalid Input (" +
-                      str(input_1) + "). Try again!")
+                print("\n" * 10 + "Error: Invalid Input (" +
+                      str(input_1) + "). Try Again!")
         else:
-            print("\n" * 10 + "ERROR: Invalid Input (" +
-                  str(input_1) + "). Try again!")
+            print("\n" * 10 + "Error: Invalid Input (" +
+                  str(input_1) + "). Try Again!")
 
 
 def def_full_file_reader():
@@ -171,8 +171,8 @@ def_file_sorter()
 
 def def_food_drink_order():
     while True:
-        print("*" * 26 + "ORDER FOODS & DRINKS" + "*" * 26)
-        print(" |NO| |FOOD NAME|         |PRICE|   |  |NO| |DRINK NAME|        |PRICE|")
+        print("*" * 26 + "Order Foods & Drinks" + "*" * 26)
+        print(" |No| |Food Name|         |Price|   |  |No| |Drink Name|        |Price|")
 
         i = 0
         while i < len(list_foods) or i < len(list_drinks):
@@ -192,7 +192,7 @@ def def_food_drink_order():
             print(food, drink)
             i += 1
 
-        print("\n (M) MAIN MENU                   (P) PAYMENT                   (E) EXIT\n" + "_" * 72)
+        print("\n (M) Main Menu                   (P) Payment                   (E) Exit\n" + "_" * 72)
 
         input_1 = input("Please Select Your Operation: ").upper()
         if (input_1 == 'M'):
@@ -200,7 +200,7 @@ def def_food_drink_order():
             def_main()
             break
         if (input_1 == 'E'):
-            print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")
+            print("*" * 32 + "Thank You" + "*" * 31 + "\n")
             break
         if (input_1 == 'P'):
             print("\n" * 10)
@@ -220,7 +220,7 @@ def def_food_drink_order():
                 except:
                     pass
 
-                input_2 = input("How Many You Want to Order?: ").upper()
+                input_2 = input("How Many You Want To Order?: ").upper()
                 if int(input_2) > 0:
                     list_item_order[int(input_1) - 1] += int(input_2)
                     print("\n" * 10)
@@ -228,17 +228,17 @@ def def_food_drink_order():
                     def_food_drink_order()
                     break
                 else:
-                    print("\n" * 10 + "ERROR: Invalid Input (" +
-                          str(input_2) + "). Try again!")
+                    print("\n" * 10 + "Error: Invalid Input (" +
+                          str(input_2) + "). Try Again!")
         except:
-            print("\n" * 10 + "ERROR: Invalid Input (" +
-                  str(input_1) + "). Try again!")
+            print("\n" * 10 + "Error: Invalid Input (" +
+                  str(input_1) + "). Try Again!")
 
 
 def def_other_services():
     while True:
-        print("*" * 29 + "OTHER SERVICES" + "*" * 29)
-        print(" |NO| |SERVICE NAME|      |PRICE|")
+        print("*" * 29 + "Other Services" + "*" * 29)
+        print(" |No| |Service Name|      |Price|")
 
         i = 0
         while i < len(list_services):
@@ -246,7 +246,7 @@ def def_other_services():
 
             i += 1
 
-        print("\n (M) MAIN MENU                   (P) PAYMENT                   (E) EXIT\n" + "_" * 72)
+        print("\n (M) Main Menu                   (P) Payment                   (E) Exit\n" + "_" * 72)
 
         input_1 = input("Please Select Your Operation: ").upper()
         if (input_1 == 'M'):
@@ -254,7 +254,7 @@ def def_other_services():
             def_main()
             break
         if (input_1 == 'E'):
-            print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")
+            print("*" * 32 + "Thank You" + "*" * 31 + "\n")
             break
         if (input_1 == 'P'):
             print("\n" * 10)
@@ -270,38 +270,38 @@ def def_other_services():
                 def_other_services()
                 break
             else:
-                print("\n" * 10 + "ERROR: Invalid Input (" +
-                      str(input_1) + "). Try again!")
+                print("\n" * 10 + "Error: Invalid Input (" +
+                      str(input_1) + "). Try Again!")
         except:
-            print("\n" * 10 + "ERROR: Invalid Input (" +
-                  str(input_1) + "). Try again!")
+            print("\n" * 10 + "Error: Invalid Input (" +
+                  str(input_1) + "). Try Again!")
 
 
 def def_report():
     while True:
-        print("*" * 33 + "REPORT" + "*" * 33 + "\n")
+        print("*" * 33 + "Report" + "*" * 33 + "\n")
         file_report = open('files'+navigator_symbol+'report.fsd', 'r').read()
         print(file_report)
-        print("\n(M) MAIN MENU          (E) EXIT\n" + "_" * 72)
+        print("\n(M) Main Menu          (E) Exit\n" + "_" * 72)
         input_1 = str(input("Please Select Your Operation: ")).upper()
         if (input_1 == 'M'):
             print("\n" * 10)
             def_main()
             break
         elif (input_1 == 'E'):
-            print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")
+            print("*" * 32 + "Thank You" + "*" * 31 + "\n")
             break
         else:
-            print("\n" * 10 + "ERROR: Invalid Input (" +
-                  str(input_1) + "). Try again!")
+            print("\n" * 10 + "Error: Invalid Input (" +
+                  str(input_1) + "). Try Again!")
 
 
 def def_payment():
     while True:
-        print("*" * 32 + "PAYMENT" + "*" * 33 + "\n")
+        print("*" * 32 + "Payment" + "*" * 33 + "\n")
         total_price = 0
 
-        report_new = "\n\n\n" + " " * 17 + "*" * 35 + "\n" + " " * 17 + "DATE: " + \
+        report_new = "\n\n\n" + " " * 17 + "*" * 35 + "\n" + " " * 17 + "Date: " + \
             str(datetime.datetime.now())[:19] + "\n" + " " * 17 + "-" * 35
         i = 0
         while i < len(list_item_order):
@@ -330,53 +330,53 @@ def def_payment():
         if total_price > var_discount_3:
             total_price -= total_price * var_discount_3_rate
             report_new += "\n" + " " * 17 + "-" * 35 + "\n" \
-                "" + " " * 17 + "DISCOUNT RATES:      % " + str(var_discount_3_rate * 100) + "\n" \
-                "" + " " * 17 + "DISCOUNT AMOUNTS:   $ " + str(round(total_price * var_discount_3_rate, 2)) + "\n" + " " * 17 + "_" * 35 + "\n" \
-                "" + " " * 17 + "TOTAL PRICES:       $ " + \
+                "" + " " * 17 + "Discount Rates:      % " + str(var_discount_3_rate * 100) + "\n" \
+                "" + " " * 17 + "Discount Amounts:   $ " + str(round(total_price * var_discount_3_rate, 2)) + "\n" + " " * 17 + "_" * 35 + "\n" \
+                "" + " " * 17 + "Total Prices:       $ " + \
                 str(round(total_price, 2)) + "\n" + " " * 17 + "*" * 35
             print(" " * 17 + "-" * 35 + "\n"
-                  "" + " " * 17 + "DISCOUNT RATES:      % " +
+                  "" + " " * 17 + "Discount Rates:      % " +
                   str(var_discount_3_rate * 100) + "\n"
-                  "" + " " * 17 + "DISCOUNT AMOUNTS:   $ " +
+                  "" + " " * 17 + "Discount Amounts:   $ " +
                   str(round(total_price * var_discount_3_rate, 2)) +
                   "\n" + " " * 17 + "_" * 35 + "\n"
-                  "" + " " * 17 + "TOTAL PRICES:       $ " + str(round(total_price, 2)))
+                  "" + " " * 17 + "Total Prices:       $ " + str(round(total_price, 2)))
         elif total_price > var_discount_2:
             total_price -= total_price * var_discount_2_rate
             report_new += "\n" + " " * 17 + "-" * 35 + "\n" \
-                "" + " " * 17 + "DISCOUNT RATES:      % " + str(var_discount_2_rate * 100) + "\n" \
-                "" + " " * 17 + "DISCOUNT AMOUNTS:   $ " + str(round(total_price * var_discount_2_rate, 2)) + "\n" + " " * 17 + "_" * 35 + "\n" \
-                "" + " " * 17 + "TOTAL PRICES:       $ " + \
+                "" + " " * 17 + "Discount Rates:      % " + str(var_discount_2_rate * 100) + "\n" \
+                "" + " " * 17 + "Discount Amounts:   $ " + str(round(total_price * var_discount_2_rate, 2)) + "\n" + " " * 17 + "_" * 35 + "\n" \
+                "" + " " * 17 + "Total Prices:       $ " + \
                 str(round(total_price, 2)) + "\n" + " " * 17 + "*" * 35
             print(" " * 17 + "-" * 35 + "\n"
-                  "" + " " * 17 + "DISCOUNT RATES:      % " +
+                  "" + " " * 17 + "Discount Rates:      % " +
                   str(var_discount_2_rate * 100) + "\n"
-                  "" + " " * 17 + "DISCOUNT AMOUNTS:   $ " +
+                  "" + " " * 17 + "Discount Amounts:   $ " +
                   str(round(total_price * var_discount_2_rate, 2)) +
                   "\n" + " " * 17 + "_" * 35 + "\n"
-                  "" + " " * 17 + "TOTAL PRICES:       $ " + str(round(total_price, 2)))
+                  "" + " " * 17 + "Total Prices:       $ " + str(round(total_price, 2)))
         elif total_price > var_discount_1:
             total_price -= total_price * var_discount_1_rate
             report_new += "\n" + " " * 17 + "-" * 35 + "\n" \
-                "" + " " * 17 + "DISCOUNT RATES:      % " + str(var_discount_1_rate * 100) + "\n" \
-                "" + " " * 17 + "DISCOUNT AMOUNTS:   $ " + str(round(total_price * var_discount_1_rate, 2)) + "\n" + " " * 17 + "_" * 35 + "\n" \
-                "" + " " * 17 + "TOTAL PRICES:       $ " + \
+                "" + " " * 17 + "Discount Rates:      % " + str(var_discount_1_rate * 100) + "\n" \
+                "" + " " * 17 + "Discount Amounts:   $ " + str(round(total_price * var_discount_1_rate, 2)) + "\n" + " " * 17 + "_" * 35 + "\n" \
+                "" + " " * 17 + "Total Prices:       $ " + \
                 str(round(total_price, 2)) + "\n" + " " * 17 + "*" * 35
             print(" " * 17 + "-" * 35 + "\n"
-                  "" + " " * 17 + "DISCOUNT RATES:      % " +
+                  "" + " " * 17 + "Discount Rates:      % " +
                   str(var_discount_1_rate * 100) + "\n"
-                  "" + " " * 17 + "DISCOUNT AMOUNTS:   $ " +
+                  "" + " " * 17 + "Discount Amounts:   $ " +
                   str(round(total_price * var_discount_1_rate, 2)) +
                   "\n" + " " * 17 + "_" * 35 + "\n"
-                  "" + " " * 17 + "TOTAL PRICES:       $ " + str(round(total_price, 2)))
+                  "" + " " * 17 + "Total Prices:       $ " + str(round(total_price, 2)))
         else:
             report_new += "\n" + " " * 17 + "-" * 35 + "\n" + " " * 17 + \
-                "TOTAL PRICES:       $ " + \
+                "Total Prices:       $ " + \
                 str(round(total_price, 2)) + "\n" + " " * 17 + "*" * 35
             print(" " * 17 + "_" * 35 + "\n" + " " * 17 +
-                  "TOTAL PRICES:       $ " + str(round(total_price, 2)))
+                  "Total Prices:       $ " + str(round(total_price, 2)))
 
-        print("\n (P) PAY           (M) MAIN MENU           (R) REPORT          (E) EXIT\n" + "_" * 72)
+        print("\n (P) Pay           (M) Main Menu           (R) Report          (E) Exit\n" + "_" * 72)
         input_1 = str(input("Please Select Your Operation: ")).upper()
         if (input_1 == 'P'):
             print("\n" * 10)
@@ -394,11 +394,11 @@ def def_payment():
             def_report()
             break
         elif ('E' in input_1) or ('e' in input_1):
-            print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")
+            print("*" * 32 + "Thank You" + "*" * 31 + "\n")
             break
         else:
-            print("\n" * 10 + "ERROR: Invalid Input (" +
-                  str(input_1) + "). Try again!")
+            print("\n" * 10 + "Error: Invalid Input (" +
+                  str(input_1) + "). Try Again!")
 
 
 def_main()
